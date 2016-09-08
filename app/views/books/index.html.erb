@@ -1,3 +1,6 @@
- <% for @book in @books %>
-    <%= @book %>
-  <% end %>
+<h1>Book List:</h1>
+<% for @book in @books %>
+  <div>
+    <%= link_to(@book.title, @book) + " - #{@book.author.first_name} #{@book.author.last_name} Published: #{@book.year} - ISBN: #{@book.isbn}" %>
+  </div>
+<% end %>
