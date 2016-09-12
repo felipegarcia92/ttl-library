@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20160908184118) do
     t.integer  "author_id"
   end
 
+  add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

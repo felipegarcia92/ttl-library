@@ -1,10 +1,10 @@
 <div>
   <h1>Title</h1>
-  <%= @book.title %>
+  <%= book.title %>
   <h1>ISBN</h1>
-  <%= @book.isbn %>
+  <%= book.isbn %>
   <h1>Year of Published</h1>
-  <%= @book.year %>
+  <%= book.year %>
   <h1>Author</h1>
-  <%= @book.author.first_name + ' ' + @book.author.last_name %>
+  <%= "#{book.author.first_name}  #{book.author.last_name}"%>
 </div>
