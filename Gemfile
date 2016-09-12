@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Database handler
 gem 'pg', '~> 0.18.4'
 # Devise for user and authentication handling
-gem 'devise'
+gem 'devise', '~> 3.5.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
