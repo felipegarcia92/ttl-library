@@ -56,6 +56,7 @@ Rails.application.routes.draw do
   #   end
   resources :books do
     resources :comments
+    resources :requests
   end
 
   root 'books#index'

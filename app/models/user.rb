@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :comments
+  has_many :requests
+
+  def requested_book(book)
+    self.requests.include?(book)
+  end
 end
