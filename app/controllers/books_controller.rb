@@ -8,6 +8,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @new_comment = current_user.comments.new
   end
 
   private
