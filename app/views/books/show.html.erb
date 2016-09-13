@@ -8,6 +8,11 @@
   <h3>Author</h3>
   <%= "#{book.author.first_name}  #{book.author.last_name}"%>
 
+  <h1>Comment List</h1>
+  <% book.comments.each do |comment| %>
+    <%= "#{comment.user.email}: '#{comment.text}' - #{comment.rating} stars" %>
+  <% end %>
+
   <h1>Add Comment</h1>
   <%= form_for([book, @new_comment]) do |c| %>
     <%= c.label :text %>
