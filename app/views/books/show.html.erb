@@ -10,11 +10,13 @@
 
   <h1>Comment List</h1>
   <% book.comments.each do |comment| %>
-    <%= "#{comment.user.email}: '#{comment.text}' - #{comment.rating} stars" %>
+    <div>
+      <%= "#{comment.user.email}: '#{comment.text}' - #{comment.rating} stars" %>
+    </div>
   <% end %>
 
   <h1>Add Comment</h1>
-  <%= form_for([book, @new_comment]) do |c| %>
+  <%= form_for([book, book.comments.new]) do |c| %>
     <%= c.label :text %>
     <%= c.text_field :text %>
 
