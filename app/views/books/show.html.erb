@@ -1,10 +1,28 @@
 <div>
   <h1>Title</h1>
-  <%= book.title %>
-  <h1>ISBN</h1>
+  <h1><%= book.title %></h1>
+  <h3>ISBN</h3>
   <%= book.isbn %>
-  <h1>Year of Published</h1>
+  <h3>Year of Published</h3>
   <%= book.year %>
-  <h1>Author</h1>
+  <h3>Author</h3>
   <%= "#{book.author.first_name}  #{book.author.last_name}"%>
+
+  <h1>Comment List</h1>
+  <% book.comments.each do |comment| %>
+    <div>
+      <%= "#{comment.user.email}: '#{comment.text}' - #{comment.rating} stars" %>
+    </div>
+  <% end %>
+
+  <h1>Add Comment</h1>
+  <%= form_for([book, book.comments.new]) do |c| %>
+    <%= c.label :text %>
+    <%= c.text_field :text %>
+
+    <%= c.label :rating %>
+    <%= c.select :rating, options_for_select((1..5).to_a) %>
+
+    <%= c.submit "Add Comment" %>
+  <% end %>
 </div>
