@@ -7,7 +7,11 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :requests
 
-  def requested_book(book)
-    self.requests.include?(book)
+  def requested_book?(book)
+    self.active_book_requests.exists?(book_id: book.id)
+  end
+
+  def active_book_requests
+    self.requests.pending
   end
 end

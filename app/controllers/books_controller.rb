@@ -8,7 +8,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    @new_request = current_user.requests.new
   end
 
   private
