@@ -1,6 +1,10 @@
 class RequestsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @requests = current_user.requests
+  end
+
   def create
     @request = book.requests.create(request_params.merge(user: current_user))
 
