@@ -1,0 +1,15 @@
+
+$error-red: #ff0101;
+$error-red-transparent: rgba(255, 1, 1, 0.5);
+
+.error-box {
+  border-radius: 5px;
+  background-color: $error-red-transparent;
+  padding: 10px;
+  display: inline-block;
+}
+
+.error-message {
+  color: $error_red;
+  font-weight: bold;
+}

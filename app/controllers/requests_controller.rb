@@ -2,8 +2,10 @@ class RequestsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @request = book.requests.create(
-                request_params.merge(user: current_user, status: 'pending'))
+    @request = book.requests.create(request_params.merge(user: current_user))
+
+    flash[:save_error] =
+      @request.errors.empty? ? nil : 'Error creating request, please try again'
 
     redirect_to :back
   end
