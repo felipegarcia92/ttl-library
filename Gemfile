@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg', '~> 0.18.4'
 # Devise for user and authentication handling
 gem 'devise', '~> 3.5.1'
+# Active Admin and its dependencies
+gem 'activeadmin', github: 'activeadmin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
