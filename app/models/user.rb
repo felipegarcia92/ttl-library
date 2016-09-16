@@ -5,4 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :comments
+  has_many :requests
+
+  def requested?(book)
+    pending_book_requests.exists?(book: book)
+  end
+
+  private
+
+  def pending_book_requests
+    requests.pending
+  end
 end
