@@ -1,0 +1,6 @@
+<h1>Your Requests:</h1>
+<% @requests.each do |request| %>
+  <div>
+    <%= "#{request.book.title} for #{request.request_date} - Status: #{request.status.capitalize}" %>
+  </div>
+<% end %>

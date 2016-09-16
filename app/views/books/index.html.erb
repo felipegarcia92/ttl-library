@@ -4,3 +4,6 @@
     <%= link_to(book.title, book) + " - #{book.author.first_name} #{book.author.last_name} Published: #{book.year} - ISBN: #{book.isbn}" %>
   </div>
 <% end %>
+<div>
+  <%= link_to('See my book requests', requests_path) %>
+</div>
