@@ -13,7 +13,7 @@ ActiveAdmin.register Request, as: 'BookRequest' do
 #   permitted
 # end
 
-actions :edit, :index
+permit_params :status
 
 index do
   column :request_date
@@ -21,11 +21,13 @@ index do
   actions
 end
 
-# form do |f|
-#   f.semantic_errors # shows errors on :base
-#   f.inputs          # builds an input field for every attribute
-#   f.actions         # adds the 'Submit' and 'Cancel' buttons
-# end
+form do |f|
+  f.semantic_errors # shows errors on :base
+  f.inputs do
+    f.input :status
+  end
+  f.actions         # adds the 'Submit' and 'Cancel' buttons
+end
 
 
 end
