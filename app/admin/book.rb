@@ -13,5 +13,6 @@ ActiveAdmin.register Book do
 #   permitted
 # end
 
+permit_params :image
 
 end

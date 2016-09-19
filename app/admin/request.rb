@@ -22,11 +22,11 @@ index do
 end
 
 form do |f|
-  f.semantic_errors # shows errors on :base
+  f.semantic_errors
   f.inputs do
     f.input :status
   end
-  f.actions         # adds the 'Submit' and 'Cancel' buttons
+  f.actions
 end
 
 
