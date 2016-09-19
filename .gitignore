@@ -21,3 +21,6 @@ config/database.yml
 
 # byebug
 .byebug_history
+
+# Uploads folder
+/public/uploads
