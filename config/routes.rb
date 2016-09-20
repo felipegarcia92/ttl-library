@@ -63,7 +63,7 @@ Rails.application.routes.draw do
   resources :requests
 
   #api
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :books, only: [:index]
     end
