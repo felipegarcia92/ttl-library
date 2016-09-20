@@ -62,5 +62,12 @@ Rails.application.routes.draw do
   end
   resources :requests
 
+  #api
+  namespace :api do
+    namespace :v1 do
+      resources :books, only: [:index]
+    end
+  end
+
   root 'books#index'
 end
