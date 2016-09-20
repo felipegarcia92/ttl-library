@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
     pending_book_requests.exists?(book: book)
   end
 
+  def to_s
+    email
+  end
+
   private
 
   def pending_book_requests

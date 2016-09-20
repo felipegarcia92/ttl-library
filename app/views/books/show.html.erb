@@ -1,6 +1,7 @@
 <div>
   <h1>Title</h1>
   <h1><%= book.title %></h1>
+  <%= image_tag(book.image, alt: book.title) %>
   <h3>ISBN</h3>
   <%= book.isbn %>
   <h3>Year of Published</h3>
