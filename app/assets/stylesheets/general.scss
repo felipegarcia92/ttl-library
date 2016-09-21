@@ -2,6 +2,25 @@
 $error-red: #ff0101;
 $error-red-transparent: rgba(255, 1, 1, 0.5);
 
+/* Header */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.header-title {
+  font-size: 2em;
+}
+
+.header-links {
+  align-self: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+/* Errors */
 .error-box {
   border-radius: 5px;
   background-color: $error-red-transparent;
@@ -12,4 +31,9 @@ $error-red-transparent: rgba(255, 1, 1, 0.5);
 .error-message {
   color: $error_red;
   font-weight: bold;
+}
+
+/* General */
+.main-title {
+  font-size: 10;
 }
