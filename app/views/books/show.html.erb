@@ -1,31 +1,40 @@
-<div>
-  <h1>Title</h1>
-  <h1><%= book.title %></h1>
+<div class="book-info-box">
   <%= image_tag(book.image, alt: book.title) %>
-  <h3>ISBN</h3>
-  <%= book.isbn %>
-  <h3>Year of Published</h3>
-  <%= book.year %>
-  <h3>Author</h3>
-  <%= "#{book.author.first_name}  #{book.author.last_name}"%>
-
+  <div class="book-info">
+    <h1><%= book.title %></h1>
+    <h3>ISBN</h3>
+    <%= book.isbn %>
+    <h3>Year of Published</h3>
+    <%= book.year %>
+    <h3>Author</h3>
+    <%= "#{book.author.first_name}  #{book.author.last_name}"%>
+    <%= render 'request_book' %>
+  </div>
+</div>
+<div class="divider-line gray"></div>
+<div class="comment-box">
   <h1>Comment List</h1>
   <% book.comments.each do |comment| %>
-    <div>
-      <%= "#{comment.user.email}: '#{comment.text}' - #{comment.rating} stars" %>
+    <div class="comment">
+      <div class="rating-box">
+        <%= "#{comment.user.email} - #{comment.rating} stars" %>
+      </div>
+      <i><%= comment.text %></i>
     </div>
   <% end %>
-
-  <h1>Add Comment</h1>
+</div>
+<div class="divider-line gray"></div>
+<div class="new-comment-box">
   <%= form_for([book, book.comments.new]) do |c| %>
+    <div class="rating">
+      <h1>Add Comment</h1>
+      <div class="new-rating-box">
+        <%= c.label :rating %>
+        <%= c.select :rating, options_for_select((1..5).to_a) %>
+      </div>
+    </div>
     <%= c.label :text %>
     <%= c.text_field :text %>
-
-    <%= c.label :rating %>
-    <%= c.select :rating, options_for_select((1..5).to_a) %>
-
     <%= c.submit 'Add Comment' %>
   <% end %>
-
-  <%= render 'request_book' %>
 </div>

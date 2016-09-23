@@ -1,0 +1,59 @@
+.book-info-box {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 30px 0;
+
+  img {
+    max-width: 400px;
+    max-height: 600px;
+  }
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+
+  .book-title {
+    font-weight: bolder;
+  }
+
+  .book-author {
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 10px 0 10px 0;
+  }
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+
+  .rating-box {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.new-comment-box {
+  display: flex;
+  flex-direction: column;
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .new-rating-box {
+    margin-left: 20px;
+  }
+}

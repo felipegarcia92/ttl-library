@@ -1,6 +1,7 @@
 
 $error-red: #ff0101;
 $error-red-transparent: rgba(255, 1, 1, 0.5);
+$light-gray: #dbdbdb;
 
 /* General */
 html {
@@ -20,6 +21,11 @@ body {
     border-width: 1px;
     align-self: center;
   }
+}
+
+.footer-container {
+  display: flex;
+  height: 50px;
 }
 
 .main-title {
@@ -70,4 +76,7 @@ body {
   font-weight: bold;
 }
 
-
+/* Colors */
+.gray {
+  background-color: $light-gray;
+}
