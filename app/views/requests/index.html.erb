@@ -1,10 +1,15 @@
 <h1 class="main-title">Your Requests</h1>
 <div class="list">
+  <div class="row list-header">
+    <span class="field">Book</span>
+    <span class="field">Request Date</span>
+    <span class="field">Status</span>
+  </div>
   <% @requests.each do |request| %>
     <div class="row">
       <span class="field"><%= "#{request.book.title}" %></span>
       <span class="field"><%= "#{request.request_date}" %></span>
-      <span class="field"><%= "Status: #{request.status.capitalize}" %></span>
+      <span class="field"><%= "#{request.status.capitalize}" %></span>
     </div>
   <% end %>
 </div>

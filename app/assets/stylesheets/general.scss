@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: row;
   flex:1;
+  padding: 0 0 10px 0;
 
   .book-title {
     font-weight: bold;
@@ -38,6 +39,17 @@ body {
   .field {
     display: flex;
     flex: 1;
+  }
+}
+
+.list-header {
+  border-bottom: 2px;
+  border-color: black;
+  border-bottom-style: solid;
+  margin-bottom: 20px;
+
+  span {
+    font-weight: bold;
   }
 }
 
