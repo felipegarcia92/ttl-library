@@ -43,6 +43,12 @@
   }
 }
 
+.user-rating {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
 .new-comment-box {
   display: flex;
   flex-direction: column;
@@ -54,6 +60,8 @@
   }
 
   .new-rating-box {
+    display: flex;
+    flex-direction: row;
     margin-left: 20px;
   }
 }

@@ -17,7 +17,9 @@
   <% book.comments.each do |comment| %>
     <div class="comment">
       <div class="rating-box">
-        <%= "#{comment.user.email} - #{comment.rating} stars" %>
+        <%= "#{comment.user.email} - " %>
+        <div class="user-rating"></div>
+        <span hidden><%= comment.rating %></span>
       </div>
       <i><%= comment.text %></i>
     </div>
@@ -29,11 +31,9 @@
     <div class="rating">
       <h1>Add Comment</h1>
       <div class="new-rating-box">
-        <%= c.label :rating %>
-        <%= c.select :rating, options_for_select((1..5).to_a) %>
+        <%= c.hidden_field :rating %>
       </div>
     </div>
-    <%= c.label :text %>
     <%= c.text_field :text %>
     <%= c.submit 'Add Comment' %>
   <% end %>
