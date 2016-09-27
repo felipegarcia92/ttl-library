@@ -18,8 +18,9 @@
     <div class="comment">
       <div class="rating-box">
         <span><%= "#{comment.user.email} - " %></span>
-        <div class="user-rating"></div>
-        <span hidden><%= comment.rating %></span>
+        <div class="user-rating">
+          <%= rating_for_user book, comment.user, 'book_rating', disable_after_rate: true %>
+        </div>
       </div>
       <i><%= comment.text %></i>
     </div>
@@ -31,7 +32,7 @@
     <div class="rating">
       <h1>Add Comment</h1>
       <div class="new-rating-box">
-        <%= c.hidden_field :rating %>
+        <%= rating_for_user book, current_user, 'book_rating' %>
       </div>
     </div>
     <%= c.text_field :text %>

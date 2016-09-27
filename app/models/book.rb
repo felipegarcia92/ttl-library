@@ -3,5 +3,7 @@ class Book < ActiveRecord::Base
   has_many :comments
   has_many :requests
 
+  ratyrate_rateable 'book_rating'
+
   mount_uploader :image, BookImageUploader
 end

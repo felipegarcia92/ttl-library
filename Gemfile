@@ -30,6 +30,8 @@ gem 'devise', '~> 3.5.1'
 gem 'activeadmin', '~> 1.0.0.pre4'
 # Carrierwave for file uploading
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+# Stars rate
+gem 'ratyrate', :github => 'wazery/ratyrate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
