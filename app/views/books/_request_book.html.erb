@@ -3,7 +3,7 @@
   <span>You have already requested this book, wait for an answer</span>
 <% else %>
   <%= form_for([book, book.requests.new]) do |r| %>
-    <%= r.label 'Date' %>
+    <span><%= r.label 'Date' %></span>
     <%= r.date_field :request_date %>
     <%= r.submit 'Request' %>
   <% end %>

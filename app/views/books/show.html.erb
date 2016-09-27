@@ -3,11 +3,11 @@
   <div class="book-info">
     <h1><%= book.title %></h1>
     <h3>ISBN</h3>
-    <%= book.isbn %>
+    <span><%= book.isbn %></span>
     <h3>Year of Published</h3>
-    <%= book.year %>
+    <span><%= book.year %></span>
     <h3>Author</h3>
-    <%= "#{book.author.first_name}  #{book.author.last_name}"%>
+    <span><%= "#{book.author.first_name}  #{book.author.last_name}"%></span>
     <%= render 'request_book' %>
   </div>
 </div>
@@ -17,7 +17,7 @@
   <% book.comments.each do |comment| %>
     <div class="comment">
       <div class="rating-box">
-        <%= "#{comment.user.email} - " %>
+        <span><%= "#{comment.user.email} - " %></span>
         <div class="user-rating"></div>
         <span hidden><%= comment.rating %></span>
       </div>
