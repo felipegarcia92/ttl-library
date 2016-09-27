@@ -10,8 +10,8 @@
     <div class="row">
       <%= link_to(book.title, book, {class: "field book-title"}) %>
       <span class="field"><%= "#{book.author.first_name} #{book.author.last_name}" %></span>
-      <span class="field"><%= "#{book.year}" %></span>
-      <span class="field"><%= "#{book.isbn}" %></span>
+      <span class="field"><%= book.year %></span>
+      <span class="field"><%= book.isbn %></span>
     </div>
   <% end %>
 </div>

@@ -3,7 +3,13 @@ $error-red: #ff0101;
 $error-red-transparent: rgba(255, 1, 1, 0.5);
 
 /* General */
+html {
+  font-size: 10px;
+}
+
 body {
+  font-size: 10px;
+
   display: flex;
   flex-direction: column;
 
@@ -17,7 +23,7 @@ body {
 }
 
 .main-title {
-  font-size: 24px;
+  font-size: 2.4em;
 }
 
 .list {
@@ -43,49 +49,13 @@ body {
 }
 
 .list-header {
-  border-bottom: 2px;
-  border-color: black;
-  border-bottom-style: solid;
+  border-bottom: 2px solid black;
   margin-bottom: 20px;
 
   span {
     font-weight: bold;
   }
 }
-
-
-/* Header */
-.header-container {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-
-  a {
-    color: black;
-    margin-right: 10px;
-    text-decoration: none;
-  }
-}
-
-.divider-line {
-  height: 2px;
-  background-color: black;
-  flex: 1;
-  margin-top: 10px;
-}
-
-.header-title {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.header-links {
-  align-self: center;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
 
 /* Errors */
 .error-box {

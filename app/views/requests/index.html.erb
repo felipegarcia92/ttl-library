@@ -7,9 +7,9 @@
   </div>
   <% @requests.each do |request| %>
     <div class="row">
-      <span class="field"><%= "#{request.book.title}" %></span>
-      <span class="field"><%= "#{request.request_date}" %></span>
-      <span class="field"><%= "#{request.status.capitalize}" %></span>
+      <span class="field"><%= request.book.title %></span>
+      <span class="field"><%= request.request_date %></span>
+      <span class="field"><%= request.status.capitalize %></span>
     </div>
   <% end %>
 </div>

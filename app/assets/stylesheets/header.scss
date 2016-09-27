@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-between;
+
+  a {
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}
+
+.divider-line {
+  height: 2px;
+  background-color: black;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.header-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.header-links {
+  align-self: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
