@@ -1,9 +1,17 @@
-<h1>Book List:</h1>
-<% @books.each do |book| %>
-  <div>
-    <%= link_to(book.title, book) + " - #{book.author.first_name} #{book.author.last_name} Published: #{book.year} - ISBN: #{book.isbn}" %>
+<h1 class="main-title">Book List</h1>
+<div class="list">
+  <div class="row list-header">
+    <span class="field">Name</span>
+    <span class="field">Author</span>
+    <span class="field">Published</span>
+    <span class="field">ISBN</span>
   </div>
-<% end %>
-<div>
-  <%= link_to('See my book requests', requests_path) %>
+  <% @books.each do |book| %>
+    <div class="row">
+      <%= link_to(book.title, book, {class: "field book-title"}) %>
+      <span class="field"><%= "#{book.author.first_name} #{book.author.last_name}" %></span>
+      <span class="field"><%= book.year %></span>
+      <span class="field"><%= book.isbn %></span>
+    </div>
+  <% end %>
 </div>

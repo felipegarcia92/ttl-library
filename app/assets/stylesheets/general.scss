@@ -2,6 +2,62 @@
 $error-red: #ff0101;
 $error-red-transparent: rgba(255, 1, 1, 0.5);
 
+/* General */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  .content-container {
+    width: 900px;
+    padding: 10px;
+    border-color: black;
+    border-width: 1px;
+    align-self: center;
+  }
+}
+
+.main-title {
+  font-size: 2.4em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  padding: 0 0 10px 0;
+
+  .book-title {
+    font-weight: bold;
+  }
+
+  .field {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.list-header {
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+/* Errors */
 .error-box {
   border-radius: 5px;
   background-color: $error-red-transparent;
@@ -13,3 +69,5 @@ $error-red-transparent: rgba(255, 1, 1, 0.5);
   color: $error_red;
   font-weight: bold;
 }
+
+
