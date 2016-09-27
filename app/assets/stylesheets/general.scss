@@ -1,16 +1,14 @@
-
 $error-red: #ff0101;
 $error-red-transparent: rgba(255, 1, 1, 0.5);
+$light-gray: #dbdbdb;
 
 /* General */
-html {
-  font-size: 10px;
-}
-
 body {
-  font-size: 10px;
+  font-size: 62.5%;
+  margin: 0;
 
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 
   .content-container {
@@ -19,7 +17,20 @@ body {
     border-color: black;
     border-width: 1px;
     align-self: center;
+    flex: 1;
   }
+}
+
+span, i, a {
+  font-size: 1.6em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
 }
 
 .main-title {
@@ -70,4 +81,14 @@ body {
   font-weight: bold;
 }
 
+.divider-line {
+  height: 2px;
+  background-color: black;
+  flex: 1;
+  margin-top: 10px;
+}
 
+/* Colors */
+.gray {
+  background-color: $light-gray;
+}

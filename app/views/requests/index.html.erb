@@ -7,7 +7,7 @@
   </div>
   <% @requests.each do |request| %>
     <div class="row">
-      <span class="field"><%= request.book.title %></span>
+      <div class="field"><%= link_to(request.book.title, request.book) %></div>
       <span class="field"><%= request.request_date %></span>
       <span class="field"><%= request.status.capitalize %></span>
     </div>

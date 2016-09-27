@@ -3,6 +3,7 @@
   flex-direction: row;
   width: auto;
   justify-content: space-between;
+  padding: 10px 10px 0 10px;
 
   a {
     color: black;
@@ -11,15 +12,12 @@
   }
 }
 
-.divider-line {
-  height: 2px;
-  background-color: black;
-  flex: 1;
-  margin-top: 10px;
+header .divider-line {
+  margin: 10px 10px 0 10px;
 }
 
 .header-title {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: bold;
 }
 
